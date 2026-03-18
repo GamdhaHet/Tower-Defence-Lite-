@@ -34,7 +34,7 @@ public class LevelCompleteView : BaseView
     public void OnNextLevelButtonClicked()
     {
         HideView();
-        GameManager.Instance.OnGameLevelExit();
+        GameManager.Instance.OnGameLevelExit(false);
         MainUIManager.Instance.GetView<TransitionView>().SetView(2f, () =>
         {
             MainUIManager.Instance.ShowView<HomeViewView>();

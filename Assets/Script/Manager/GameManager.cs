@@ -89,9 +89,9 @@ namespace TD.Manager
             return currentLevel;
         }
 
-        public void OnGameLevelExit()
+        public void OnGameLevelExit(bool isGamePlayViewActive = true)
         {
-            gamePlayView.SetActive(false);
+            gamePlayView.SetActive(isGamePlayViewActive);
             RaiseOnLevelExit();
         }
 
