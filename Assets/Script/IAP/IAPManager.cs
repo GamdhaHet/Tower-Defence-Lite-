@@ -2,8 +2,6 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Purchasing;
-using Unity.Services.Core;
-using Unity.Services.Core.Environments;
 using TD.Manager;
 using TD.UI;
 using System.Collections.Generic;

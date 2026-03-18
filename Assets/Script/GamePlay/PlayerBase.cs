@@ -1,7 +1,6 @@
 using System.Collections;
 using TD.Manager;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerBase : MonoBehaviour
 {
@@ -9,27 +8,15 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] private Color hitColor = new();
     [SerializeField] private float hitDuration;
     [SerializeField] private int flashes;
-    public bool isDead { get; set; }
 
     private Color _originalColor = Color.white;
     private Coroutine _hitRoutine;
-    private float fullHealth = 100f;
-
-    private void Start()
-    {
-        SetHealthBar(fullHealth);
-    }
 
     public void PlayHitEffect(float damage)
     {
         StopHitEffect();
         _hitRoutine = StartCoroutine(HitFlashRoutine());
         TakingDamage(damage);
-    }
-
-    public void SetHealthBar(float fullHealth)
-    {
-        this.fullHealth = fullHealth;
     }
 
     private void StopHitEffect()

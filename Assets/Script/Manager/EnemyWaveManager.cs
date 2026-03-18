@@ -152,7 +152,6 @@ namespace TD.EnemyHandler
 
         private IEnumerator SpawnWave()
         {
-            PlayerInfoManager.Instance.Rounds++;
             _isSpawningWave = true;
             _enemiesAlive = _currentLevelDataSO.GetTotalEnemiesInWave(waveIndex);
 

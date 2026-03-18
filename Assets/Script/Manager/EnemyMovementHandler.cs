@@ -87,7 +87,6 @@ namespace TD.EnemyHandler
 
         private void OnReachToPlayerBase(Enemy enemy)
         {
-            PlayerInfoManager.Instance.Lives--;
             GameManager.Instance.playerBase.PlayHitEffect(enemy.damage);
             EnemyWaveManager.Instance.OnEnemyDie();
             enemy.AfterDie();
