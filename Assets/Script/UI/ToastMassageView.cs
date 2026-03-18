@@ -17,7 +17,6 @@ namespace TD.UI
         private Coroutine coroutine;
         private Gradient currentGradient;
 
-        [Button("ShowView")]
         public void ShowView(string msgText1, bool isRedColorText = false, float waitTime = 1.2f)
         {
             if (isRedColorText)

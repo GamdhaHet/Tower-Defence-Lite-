@@ -25,14 +25,7 @@ namespace TD.UI
                 return _currencyViewsDict[rewardType];
             return _currencyViewsDict[RewardType.COIN];
         }
-
-        public Transform GetCurrencyTarget(RewardType rewardType)
-        {
-            if (_currencyViewsDict.ContainsKey(rewardType))
-                return _currencyViewsDict[rewardType].GetTargetTransform();
-            return _currencyViewsDict[RewardType.COIN].GetTargetTransform();
-        }
-
+        
         public void SetHeartView(int lives)
         {
             _heartView.SetHeartView(lives);

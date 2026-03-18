@@ -1,17 +1,25 @@
+using TD.Manager;
+
 namespace TD.UI
 {
     public class NoInternetPopup : BaseView
     {
-        // Start is called before the first frame update
-        void Start()
+        public void CheckInternet()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            BufferingScreen bufferingView = MainUIManager.Instance.GetView<BufferingScreen>();
+            bufferingView.ShowView();
+            InternetChecker.Instance.CheckInternet((result) =>
+            {
+                if (result)
+                {
+                    bufferingView.HideView();
+                }
+                else
+                {
+                    bufferingView.HideView();
+                    ShowView();
+                }
+            });
         }
     }
 }
